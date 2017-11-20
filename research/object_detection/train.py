@@ -82,6 +82,7 @@ flags.DEFINE_string('model_config_path', '',
 
 FLAGS = flags.FLAGS
 
+os.environ["CUDA_VISIBLE_DEVICES"] = '1'
 
 def main(_):
   assert FLAGS.train_dir, '`train_dir` is missing.'

@@ -59,7 +59,7 @@ def visualize_detection_results(result_dict,
                                 summary_dir='',
                                 export_dir='',
                                 agnostic_mode=False,
-                                show_groundtruth=False,
+                                show_groundtruth=True,
                                 min_score_thresh=.5,
                                 max_num_predictions=20):
   """Visualizes detection results and writes visualizations to image summaries.

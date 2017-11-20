@@ -95,7 +95,7 @@ def draw_bounding_box_on_image_array(image,
                                      ymax,
                                      xmax,
                                      color='red',
-                                     thickness=4,
+                                     thickness=2,
                                      display_str_list=(),
                                      use_normalized_coordinates=True):
   """Adds a bounding box to an image (numpy array).
@@ -195,7 +195,7 @@ def draw_bounding_box_on_image(image,
 def draw_bounding_boxes_on_image_array(image,
                                        boxes,
                                        color='red',
-                                       thickness=4,
+                                       thickness=2,
                                        display_str_list_list=()):
   """Draws bounding boxes on image (numpy array).
 
@@ -223,7 +223,7 @@ def draw_bounding_boxes_on_image_array(image,
 def draw_bounding_boxes_on_image(image,
                                  boxes,
                                  color='red',
-                                 thickness=4,
+                                 thickness=2,
                                  display_str_list_list=()):
   """Draws bounding boxes on image.
 
@@ -393,7 +393,7 @@ def visualize_boxes_and_labels_on_image_array(image,
                                               max_boxes_to_draw=20,
                                               min_score_thresh=.5,
                                               agnostic_mode=False,
-                                              line_thickness=4):
+                                              line_thickness=2):
   """Overlay labeled boxes on an image with formatted scores and label names.
 
   This function groups boxes that correspond to the same location
@@ -444,7 +444,7 @@ def visualize_boxes_and_labels_on_image_array(image,
       if keypoints is not None:
         box_to_keypoints_map[box].extend(keypoints[i])
       if scores is None:
-        box_to_color_map[box] = 'black'
+        box_to_color_map[box] = 'red'
       else:
         if not agnostic_mode:
           if classes[i] in category_index.keys():
